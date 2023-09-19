@@ -1,0 +1,119 @@
+\section*{Theoretical Questions}
+
+\begin{enumerate}
+    \item \textit{What is Artificial Intelligence (AI)?} \\
+    
+    Artificial intelligence is: 
+
+    \begin{itemize}
+        \item Machines and programs acting in a way that humans perceive as humanly \cite{aima}.
+        \item Machines and programs that think humanly and are able to solve problems through rational analysis of the goals and environments they operate in \cite{aima}. 
+        \item A field combining computer science and robust datasets to enable problem-solving \cite{ibm}.
+    \end{itemize}
+    
+    \item \textit{What is the Turing test? What is its purpose and how is it conducted? Are there any new proposals for the Turing test?} 
+
+    The Turing test is a test designed by Alan Turing in 1950 to bypass the question "Can a machine think?" 
+
+    The purpose of the test is to check if a machine can display human intelligence and is conducted by having the machine answer a rigorous set of questions. If the interrogator cannot distinguish the machine's answers from those of a human, the machine passes the test. It is not required for the machine to simulate a physical person to pass the test, but this is a requirement in the proposed \textbf{total Turing test}. This requires interactions in the physical world as well as textual interactions. This expand the Turing test form involving natural language processing, knowledge representation, automated reasoning, and machine learning to in addition involving computer vision and robotics to perceive and interact with the world \cite{aima}. \\
+    
+    \item \textit{What is rationality and what is the difference between thinking rationally and acting rationally?} 
+    
+    Rationality is doing something in the correct manner for correct reasons. The difference between thinking rationally and acting rationally is that thinking rationally requires patterns for argument structures that always yield correct conclusions given the correct premises. This requires knowledge of the world that is certain, which is is generally not possible. Thus an element of probability is added to knowledge. 
+
+    Acting rationally is about doing the right thing/action. An agent does not necessarily need to think rationally in order to act rationally, but the combination of the two yields better results \cite{aima}.\\ 
+
+    \item \textit{What is the connection between knowledge and action according to Aristotle? How can his argument be used to implement his idea in AI?}
+
+    The connection between knowledge and action according to Aristotle is a logical connection between the goals of the agent and knowledge of the action's outcome. 
+        \begin{enumerate}
+            \item \textit{Who was (or were) the first AI researcher(s) to implement these ideas?} 
+            
+            The first AI researchers to implement these ideas were Allen Newell and Herbert Simon. 
+            \item \textit{What is the name of the program or system they developed? Write a short description about it.}
+            
+            The program they developed is called the General Problem Solver. GPS solved problems by finding and solving subproblems, much like humans do. E.g you want a cup of tea, then you need to boil water and add the tea to the boiled water. Thus the problem of I want tea, turns into I must boil water to make tea \cite{aima}.
+        \end{enumerate}
+
+\newpage
+
+    \item \textit{Consider a robot with the task of crossing the road, and an action portfolio A}: \\
+
+        \textit{A = \{lookBack, lookForward, lookLeft, lookRight, goForward, goBack, goLeft, goRigth\}}
+
+        \begin{itemize}
+            \item \textit{While crossing the road, an elk crashes into the robot and smashes it. Is the robot rational?}
+            
+            The robot is rational. It behaves as good as it can given its action portfolio. The fact that the elk crashes into the robot is not the fault of the robot. 
+            \item \textit{While crossing the road on a green light, a passing car drives into the robot and crashes, preventing the robot from crossing to the other side. Is the robot rational?} 
+
+            The robot is rational assuming that the green light was for the robot. In that case the car was breaking the traffic laws. If however the light was green for the car, the robot is irrational as it is crossing the road illegally. 
+        \end{itemize}
+
+    \item \textit{Consider the \textbf{vacuum cleaner} world described in Figure 2.2 (Chapter 2.1 of AIMA 4th Ed.). Let us modify this vacuum environment such that the agent is penalised with 1 point for each movement:} 
+        \begin{itemize}
+            \item \textit{Could a simple reflex agent be rational for this environment? Why?}
+
+            The simple reflex agent will just do the action set it is given. Thus it will move between A and B and clean, getting penalised many points and thus not behaving rationally. 
+            
+            \item \textit{Could a reflex agent with state be rational in this environment? Why?}
+
+            A reflex agent with state would be able to save the state of the room it just left. Thus if the agent has information about how or when the room will get dirty again, it can make rational decisions on when to move to the other room, minimising the penalty points. 
+            
+            \item \textit{Assume now that the simple reflex agent (i.e., with no internal state) can perceive the clean status of both locations at the same time. Could this agent be rational? Why? In case it could be rational, write the agent function using mathematical notation or a table.}
+
+            This agent could be rational because it would be able to move to a dirty area or stay in a clean area if the other area is also clean. Thus minimising movement ant penalty points. 
+
+            \[
+            \begin{tabular}{|c|c|}
+                \hline
+                \text{Percept sequence} & \text{Action} \\
+                \hline
+                [A, ADirty, BClean] & Suck \\
+                
+                [A, AClean, BClean] & Stay \\
+                
+                [A, AClean, BDirty] & Right \\
+                
+                [B, ADirty, BDirty] & Suck \\
+                
+                [B, ADirty, BClean] & Left \\
+                \vdots & \\
+                \hline
+            \end{tabular}
+            \]
+        \end{itemize}
+
+    \item \textit{Consider the \textbf{original vacuum cleaner environment} shown in Figure 2.2. Describe the environment using the properties from Chapter 2.3.2 (e.g. episodic/sequential, deterministic/stochastic, etc.) Explain why you chose such values and properties.}
+
+    The environment is: 
+    \begin{itemize}
+        \item Partially observable, since the agent is only able to see the state of the area it is currently in 
+        \item Single-Agent, there is only one agent, the vacuum cleaner 
+        \item Deterministic, the agent's next action is only depending on the current state and action of the agent 
+        \item Episodic, the actions of the agent does not affect its future actions 
+        \item Dynamic, the environment can change by becoming dirty 
+        \item Discrete, there are a finite number of states the environment can be in 
+        \item Known environment, the laws of the environment is known
+    \end{itemize}
+
+    \item \textit{Write both advantages and limitations of the following types of agents:}
+        \begin{itemize}
+            \item \textit{Simple reflex agents}
+
+            The advantage of simple reflex agents is that they are simple and lightweight, their limitations is that they are not very intelligent. This can lead to the agent getting stuck in infinite loops if they are not made with an escape mechanism \cite{aima}.
+            
+            \item \textit{Model-based reflex agents}
+
+            The advantage of model-based reflex agents is that they are still relatively simple, but able to retain information about the state of the environment and how the environment evolves and changes. The disadvantages of the agents are that the agent seldom can determine the state of partially observable environments and that they can be forced to make a decision even though there is uncertainty of the current state \cite{aima}. 
+            
+            \item \textit{Goal-based agents}
+
+            The advantages of Goal-based agents are that they are flexible in that the knowledge that supports its decisions is represented explicitly and is easily modified. The limitations of goal-based agents are that the decision making can be complex and less efficient. There can also be conflicting goals making decisions harder \cite{aima}.  
+            
+            \item \textit{Utility-based agents}
+
+            The advantages of utility based agents are that they are very flexible in decision making and using goals and means that maximise the utility of the agent. In other words the agent will reach its goal in the "best" way possible. The limitations of utility-based agents are that they are complex and need to map the environment they operate in continuously in order to determine the action with highest utility \cite{aima}.  
+            
+        \end{itemize}
+\end{enumerate}

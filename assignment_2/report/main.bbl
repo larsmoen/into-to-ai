@@ -1,0 +1,56 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{astar_gfg}{online}{}
+      \name{author}{1}{}{%
+        {{hash=425c7d7bcfa2cb671a0cd1786c9a1347}{%
+           family={Belwariar},
+           familyi={B\bibinitperiod},
+           given={Rachit},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{425c7d7bcfa2cb671a0cd1786c9a1347}
+      \strng{fullhash}{425c7d7bcfa2cb671a0cd1786c9a1347}
+      \strng{bibnamehash}{425c7d7bcfa2cb671a0cd1786c9a1347}
+      \strng{authorbibnamehash}{425c7d7bcfa2cb671a0cd1786c9a1347}
+      \strng{authornamehash}{425c7d7bcfa2cb671a0cd1786c9a1347}
+      \strng{authorfullhash}{425c7d7bcfa2cb671a0cd1786c9a1347}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A* Search Algorithm}
+      \field{urlday}{14}
+      \field{urlmonth}{9}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.geeksforgeeks.org/a-search-algorithm/
+      \endverb
+      \verb{url}
+      \verb https://www.geeksforgeeks.org/a-search-algorithm/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
