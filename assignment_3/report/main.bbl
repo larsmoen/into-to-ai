@@ -16,5 +16,46 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{aima}{book}{}
+      \name{author}{2}{}{%
+        {{hash=143fa183327d9fcd9de18eec99d6ca97}{%
+           family={Russell},
+           familyi={R\bibinitperiod},
+           given={Stuart},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5de798d5fa3c0236c0478134cd23f52a}{%
+           family={Norvig},
+           familyi={N\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {London, England}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Education}%
+      }
+      \strng{namehash}{b280605b721b4ebcba5395298499f924}
+      \strng{fullhash}{b280605b721b4ebcba5395298499f924}
+      \strng{bibnamehash}{b280605b721b4ebcba5395298499f924}
+      \strng{authorbibnamehash}{b280605b721b4ebcba5395298499f924}
+      \strng{authornamehash}{b280605b721b4ebcba5395298499f924}
+      \strng{authorfullhash}{b280605b721b4ebcba5395298499f924}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4}
+      \field{title}{Artificial intelligence: A modern approach, global edition}
+      \field{year}{2021}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

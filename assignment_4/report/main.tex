@@ -1,0 +1,29 @@
+% Author - Jon Arnt Kårstad, NTNU IMT
+\documentclass{article}
+
+% Importing settings from our file "setup.sty"
+\usepackage{setup}
+
+% Beginning of document
+\begin{document}
+
+% Inserting title page
+\import{./Sections/}{title}
+
+% Defining front matter settings (Norsk: innstillinger for forord m.m.)
+\frontmatter
+
+% Defining main matter settings (Norsk: innstillinger for hoveddelen av teksten)
+\mainmatter
+
+% Introduction explaining this LaTeX-template
+
+
+% Printing bibliography
+\newpage 
+\import{./Sections/}{a}
+\newpage
+
+% End of document
+\printbibliography
+\end{document}

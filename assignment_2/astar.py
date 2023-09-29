@@ -54,7 +54,7 @@ def a_star(map: Map_Obj):
             # Check if neighbour can be traversed
             if map.get_cell_value(pos) > 0:
                 # Calculate the cost from the start to this position
-                # get_cell_value will alloe for maps with variable cell cost (Part 2)
+                # get_cell_value will allow for maps with variable cell cost (Part 2)
                 g = q.g + map.get_cell_value(pos)
                 child = Node(q, pos, g, manhattan(pos, G))
                 # Check if the possible successor node is already in the open or closed list

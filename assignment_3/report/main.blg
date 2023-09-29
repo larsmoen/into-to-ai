@@ -1,9 +1,17 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'main.blg'
-[70] biber-darwin:340> INFO - === Tue Sep 19, 2023, 15:53:29
-[86] Biber.pm:415> INFO - Reading 'main.bcf'
-[172] Biber.pm:952> INFO - Found 0 citekeys in bib section 0
-[178] Utils.pm:395> WARN - The file 'main.bcf' does not contain any citations!
-[185] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[185] bbl.pm:757> INFO - Output to main.bbl
-[186] Biber.pm:128> INFO - WARNINGS: 1
+[68] biber-darwin:340> INFO - === Wed Sep 20, 2023, 10:28:31
+[82] Biber.pm:415> INFO - Reading 'main.bcf'
+[167] Biber.pm:952> INFO - Found 1 citekeys in bib section 0
+[181] Biber.pm:4340> INFO - Processing section 0
+[190] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
+[191] bibtex.pm:1689> INFO - LaTeX decoding ...
+[195] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
+[220] Utils.pm:395> WARN - BibTeX subsystem: /var/folders/0t/v49jdw0d5_zgqtf534k083tc0000gn/T/biber_tmp_62Lb/33e59b5ca9ec342068223d604c3f8d55_99747.utf8, line 4, warning: 46 characters of junk seen at toplevel
+[226] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
+[227] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[227] Biber.pm:4168> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-GB'
+[227] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-GB'
+[228] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[228] bbl.pm:757> INFO - Output to main.bbl
+[228] Biber.pm:128> INFO - WARNINGS: 1

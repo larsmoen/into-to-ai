@@ -197,6 +197,7 @@ class CSP:
         of legal values has a length greater than one.
         """
 
+        # Select a random unassigned variable form assignment
         # unassigned_vars = []
         # for var in assignment:
         #     if len(assignment[var]) > 1:
@@ -205,6 +206,7 @@ class CSP:
         #     return unassigned_vars[random.randint(0, len(unassigned_vars) - 1)]
         # return None
 
+        # Select the first unassigned variable in assignment
         # for var in assignment:
         #     if len(assignment[var]) > 1:
         #         return var
@@ -345,25 +347,29 @@ def print_sudoku_solution(solution):
 if __name__ == "__main__":
 
     easy = create_sudoku_csp("./assignment_3/easy.txt")
-    print("easy")
+    print("easy \n")
     print_sudoku_solution(easy.backtracking_search())
+    print()
     print(f"Times Backtrack was called: {easy.backtrack_runs}")
     print(f"Times Backtrack failed: {easy.failures} \n")
 
     medium = create_sudoku_csp("./assignment_3/medium.txt")
-    print("medium")
+    print("medium \n")
     print_sudoku_solution(medium.backtracking_search())
+    print()
     print(f"Times Backtrack was called: {medium.backtrack_runs}")
     print(f"Times Backtrack failed: {medium.failures} \n")
 
     hard = create_sudoku_csp("./assignment_3/hard.txt")
-    print("hard")
+    print("hard \n")
     print_sudoku_solution(hard.backtracking_search())
+    print()
     print(f"Times Backtrack was called: {hard.backtrack_runs}")
     print(f"Times Backtrack failed: {hard.failures} \n")
 
     veryhard = create_sudoku_csp("./assignment_3/veryhard.txt")
-    print("veryhard")
+    print("veryhard \n")
     print_sudoku_solution(veryhard.backtracking_search())
+    print()
     print(f"Times Backtrack was called: {hard.backtrack_runs}")
     print(f"Times Backtrack failed: {hard.failures} \n")
