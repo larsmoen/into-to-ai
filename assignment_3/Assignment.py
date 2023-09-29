@@ -176,13 +176,18 @@ class CSP:
         # TODO: YOUR CODE HERE
         self.backtrack_runs += 1
         var = self.select_unassigned_variable(assignment)
+        # If all variables are assigned, return
         if var == None:
             return assignment
         for value in assignment[var]:
+            # Copy assignment to allow clean slate
             tmp_assignment = copy.deepcopy(assignment)
+            # Assign value to variable and check if it is consistent
             tmp_assignment[var] = [value]
+            # Call to the AC-3 algorithm
             inferences = self.inference(
                 tmp_assignment, self.get_all_arcs())
+            # If the inference was successful, continue the search
             if inferences:
                 result = self.backtrack(tmp_assignment)
                 if result:
@@ -197,7 +202,7 @@ class CSP:
         of legal values has a length greater than one.
         """
 
-        # Select a random unassigned variable form assignment
+        # # Select a random unassigned variable form assignment
         # unassigned_vars = []
         # for var in assignment:
         #     if len(assignment[var]) > 1:
@@ -206,7 +211,7 @@ class CSP:
         #     return unassigned_vars[random.randint(0, len(unassigned_vars) - 1)]
         # return None
 
-        # Select the first unassigned variable in assignment
+        # # Select the first unassigned variable in assignment
         # for var in assignment:
         #     if len(assignment[var]) > 1:
         #         return var
@@ -217,7 +222,9 @@ class CSP:
         for var in assignment:
             if len(assignment[var]) > 1:
                 mrv.append([var, len(assignment[var])])
+        # Sort all unassigned variables by number of possible assignments least to most
         mrv = sorted(mrv, key=lambda x: x[1])
+        # Return variable if any
         if mrv:
             return mrv[0][0]
         return None
@@ -232,8 +239,10 @@ class CSP:
         while queue:
             i, j = queue.pop()
             if self.revise(assignment, i, j):
+                # If there are no legal assignments, then this assignment is wrong
                 if len(assignment[i]) == 0:
                     return False
+                # As the assignments are changed, we have to check all neighbours as again
                 for x in self.get_all_neighboring_arcs(i):
                     if j not in x:
                         queue.append(x)
@@ -258,11 +267,13 @@ class CSP:
                 if (x, y) in self.constraints[i][j]:
                     consistent = True
                     break
+            # Add assignment to domain if consistent
             if consistent:
                 updated_domain.append(x)
             else:
                 revised = True
 
+        # Update domain
         assignment[i] = updated_domain
 
         return revised
